@@ -1,0 +1,27 @@
+{% extends 'layout.njk' %}
+
+{% block title%}
+    <title>Receitas -Foodfy</title>
+{%endblock%}
+
+{% block content%} 
+<div class="food">
+    <section>
+      
+          <div class='gridf'>
+            {% for receita in receitas%}
+            <div class="card" id="{{receita.id}}">
+              <div class="images">
+                <img src="{{receita.image}}" alt="" />
+              </div><!-- /images -->
+                <div class="foodcardtxt">
+                  <p class="nome">{{receita.title}}</p>
+                  <p class="autor">{{receita.author}}</p>
+                </div><!-- /foodcard  -->
+                </div>
+                {%endfor%}
+        </div><!-- /mais-acessadas -->
+      </section>
+
+      <script src="/js/script.js"></script>
+{%endblock%}

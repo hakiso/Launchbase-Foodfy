@@ -1,0 +1,362 @@
+* {
+  margin:0;
+  padding:0;
+  border:0;
+  box-sizing: border-box;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+header nav {
+  align-items: center;
+  justify-content: start;
+  margin: 30px 0;
+}
+
+header .logo {
+height: 26.9px;
+width: 90.6px;
+padding-top: 20px;
+}
+
+header .menu {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  padding-left: 100px;
+}
+
+header .menu a {
+  margin-left: 30px;
+  color: #111111;
+  font-family: 'Roboto';
+  text-decoration: none;
+}
+
+header .topo img {
+  margin-right: 120px;
+}
+
+.topo {
+  max-width: 940px;
+  margin: 0 auto;
+}
+
+.linha {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+main {
+  width: 50%;
+  margin: 0 auto 5rem auto;
+}
+
+.melhores-receitas {
+  background: #fbdfdb;
+	border-radius: 30px;
+	margin-bottom: 3rem;
+}
+
+.container {
+	background-color: #FBDFDB;
+  border-radius: 30px;
+  height: 366px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 100px 0 60px;
+}
+
+.cards {
+  margin: auto 0;
+  height: 10.6%;
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.cards .card__content {
+  font-weight: bold;
+  font-size: 32px;
+  color: #111111;
+  font-family: 'Roboto';
+}
+
+.melhores-receitas .melhores-receitas__texto {
+  align-self: center;
+}
+
+.melhores-receitas .melhores-receitas__texto h2 {
+  color:  #111111;
+  font-family: 'roboto';
+  font-size: 32px;
+}
+
+.melhores-receitas .melhores-receitas__texto p {
+  line-height: 28px;
+  color: rgb(17, 17, 17, 0.7);
+  font-family: 'roboto';
+  font-size: 18px;
+  max-width: 50%;
+}
+
+.melhores-receitas .melhores-receitas__chefe {
+  margin-top: 6%;
+  height: 350px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.4%;
+}
+
+.mais-acessadas h2 {
+  font-family: 'roboto';
+  color: #111111;
+  font-size: 24px;
+  display: block;
+  padding-bottom: 1.8%;
+}
+
+.food {
+  padding-left: 370px;
+  padding-right: 80px;
+  width: 80%;
+  margin-left: 118px;
+  padding-bottom: 378px;
+}
+
+.foodcardtxt {
+  padding: 2.5% 0 2.5% 0;
+}
+
+.foodcardtxt .nome {
+  margin-bottom: 3px;
+}
+
+.card {
+  cursor: pointer;
+}
+
+.mais-acessadas__card .nome {
+  font-family: 'Roboto';
+  font-size: 18px;
+}
+
+.card .autor {
+  font-family: 'Roboto';
+  font-size: 14px;
+  color: #777777;
+}
+
+.card img {
+  border-radius: 15px;
+  width: 100%;
+}
+
+.copyright {
+  text-align: center;
+  font-family:'Roboto';
+  font-size: 14px;
+  color: #999999;
+  
+}
+
+.txt h1 {
+  padding-top: 28.75px;
+  padding-bottom: 8.75px;
+  font-family:'Roboto';
+  font-weight: bold;
+  font-size: 24px;
+  color: #111111;
+}
+
+.txt p {
+  font-family:'Roboto';
+  font-size: 18px;
+  color: #444444;
+  line-height: 28px;
+  
+}
+
+.gridf {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.4%;
+}
+.card img {
+  border-radius: 15px;
+  width: 100%;
+}
+
+.gridf .nome {
+  font-family: 'Roboto';
+  font-size: 18px;
+}
+
+.gridf .autor {
+  font-family: 'Roboto';
+  font-size: 14px;
+  color: #777777;
+}
+
+.card {
+  cursor: pointer;
+}
+
+.modal-overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  visibility: hidden;
+}
+
+.modal-active {
+  visibility: visible;
+}
+
+.modal {
+  background: center;
+  background-color: #FFFFFF;
+  width: 660px;
+  height: 413px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border-radius: 16px;
+  text-align: center;
+  font-family: 'Roboto';
+  padding: 30px;
+}
+
+.modal img {
+  border-radius: 15px;
+  margin-bottom: 10px;
+  height: 200px;
+  width: 100%;
+}
+
+.modal .title {
+  margin-bottom: 5px;
+  font-size: 24px;
+  color: #111111;
+}
+
+.modal p {
+  font-size: 18px;
+  color: #777777;
+}
+
+.modal .close p {
+  font-size: 16px;
+  color: #999999;
+  margin-top: 75px;
+}
+
+.modal .close p:hover {
+  color: #111111;
+  cursor: pointer;
+}
+
+.active {
+  font-weight: 900;
+}
+
+
+.receita{
+  height: auto;
+  padding-bottom: 80px;
+  padding-right: 148px;
+}
+
+.receita .banner-img{
+  margin: 0 auto;
+  width: 800px;
+}
+
+.receita .banner-img img{
+  width: 100%;
+  border-radius: 20px;
+}
+
+
+.receita .card-title{
+ 
+  text-align: center;
+  padding-bottom: 59px;
+  padding-top: 50px;
+}
+
+.receita .card-title h1 {
+  font-family: 'Roboto';
+  font-weight: bold;
+  font-size: 36px;
+  color: #111111;
+}
+
+.receita .card-title p {
+  padding-top: 4px;
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 20px;
+  color: #777777;
+}
+
+.receita .topic{
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  list-style-position: inside;
+  padding-bottom: 30px;
+}
+
+.receita .topic h1{
+  padding-bottom: 19px;
+  font-family: 'Roboto';
+  font-weight: bold;
+  font-size: 24px;
+  color: #111111;
+}
+
+.receita .topic h1 a{
+  font-size: 10px;
+  text-decoration: none;
+  color: rgb(73, 67, 67);
+  padding: 1%;
+  cursor: pointer;
+}
+
+.receita .topic-content ul, p {
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 18px;
+  color: #444444;
+  line-height: 28px;
+}
+
+.topic-content.hidden {
+display: none !important;
+
+}
+
+.active {
+  font-weight: bold;
+}
+
+footer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  background-color: #eeeeee;
+  height: 62px;
+  font-size: 14px;
+  color: #999999;
+}

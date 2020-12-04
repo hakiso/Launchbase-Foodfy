@@ -1,0 +1,52 @@
+{% extends '../layout.njk' %}
+
+{%block css%}
+  <link rel="stylesheet" href="fodfystyles.css">
+{%endblock%}
+
+{% block title%}
+  <title>Foodfy</title>
+{%endblock%}
+
+{% block content %}
+      <main>
+          <!-- INICIO MELHORES RECEITAS -->
+        <section class='melhores-receitas'>
+          <div class='container'>
+              <div class="melhores-receitas__texto">
+                  <h2>As melhores receitas</h2>
+                  <p class="descricao">
+                    Aprenda a construir os melhores pratos com receitas criadas por profissionais do mundo inteiro.
+                  </p>
+              </div>
+
+              <div class="melhores-receitas__chefe">
+                <img class="img-fluid" src="img/chef.png" alt="Chefe">
+              </div>
+          </div>
+        </section>
+
+        <!-- INICIO MAIS ACESSADAS -->
+        <section>
+          <div class='mais-acessadas'>
+            <h2>Mais Acessadas</h2>
+            <div class='gridf'>
+              {%for receita in receitas%}
+              <div class="card" id="{{receita.id}}">
+                <div class="thumbnail">
+                  <img src="{{receita.image}}" alt="" />
+                </div><!-- /thumbnail -->
+                <div class="foodcardtxt">
+                  <p class="nome">{{receita.title}}</p>
+                  <p class="autor">{{receita.author}}</p>
+                </div>
+              </div><!-- /mais-acessadas__card  -->
+              {%endfor%}
+             
+          </div><!-- /mais-acessadas -->
+        </section>
+      </main>
+
+       <script src="/js/script.js"></script>
+      <!-- FIM MAIS ACESSADAS -->
+{%endblock%}

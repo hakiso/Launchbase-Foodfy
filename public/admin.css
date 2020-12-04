@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+header .topo {
+    height: 80px;
+    background-color: #111111;
+}
+
+header .logo {
+    padding: 32px 231px;
+}
+
+.title {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.title h2 {
+    padding: 32px 231px 20px;
+    font-family: 'Roboto';
+    font-weight: bold;
+    font-size: 24px;
+    color: #111111;
+}
+
+.title a {
+    background-color: #6558C3;
+    border-radius: 4px;
+    font-family: 'Roboto';
+    font-weight: bold;
+    font-size: 16px;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: table;
+    margin: 28px auto 0 32px;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.receita-admin {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 20px;
+    padding-left: 230px;
+}
+
+.receita-admin .receita img {
+    width: 172px;
+    height: 80px;
+    border-radius: 8.57px;
+}
+
+.receita-admin a {
+    font-family: 'Roboto';
+    font-weight: bold;
+    font-size: 14px;
+    color: #6558C3;
+    text-decoration: none;
+    position: absolute;
+    padding-top: 52px;
+}
+
+.container :last-child div {
+    display: inline-flex;
+}
+
+.container :last-child div h3 {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 18px;
+    color: #111111;
+}
+
+.container :last-child div p {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 14px;
+    color: #777777;
+    position: absolute;
+    padding-top: 24px;
+}
+
+
+
+/* Show */
+
+.recipe {
+    padding-right: 504px;
+    padding-top: 107px;
+}
+
+.recipe .por {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.recipe .por a {
+    background-color: #6558C3;
+    border-radius: 4px;
+    font-family: 'Roboto';
+    font-weight: bold;
+    font-size: 16px;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: table;
+    margin: 0 auto 0 340px;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.recipe .por h1 {
+    font-family: 'Roboto';
+    font-weight: bold;
+    color: #111111;
+    padding-left: 231px;
+    padding-bottom: 22px;
+}
+
+
+.recipe .banner-img {
+    margin: 0 auto;
+    width: 940px;
+    height: 280px;
+}
+
+.recipe .banner-img img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.recipe .card-title{
+    text-align: center;
+    padding-bottom: 59px;
+    padding-top: 50px;
+}
+
+.recipe .card-title h1 {
+    font-family: 'Roboto';
+    font-weight: bold;
+    font-size: 36px;
+    color: #111111;
+}
+
+.recipe .card-title p {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 20px;
+    color: #777777;
+}
+
+.recipe .topic h1 {
+    font-family: 'Roboto';
+    font-weight: bold;
+    font-size: 24px;
+    color: #111111;
+    padding-bottom: 30px;
+}
+
+.recipe ul {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 18px;
+    color: #444444;
+    line-height: 28px;
+}
+
+.recipe .topic p {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 18px;
+    color: #444444;
+    line-height: 28px;
+}
+
+
+
+.recipe .topic{
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    list-style-position: inside;
+    padding-bottom: 30px;
+    padding-right: 132px;
+}
+
+.recipe .topic h1 a{
+    font-size: 10px;
+    text-decoration: none;
+    color: rgb(73, 67, 67);
+    padding: 1%;
+    cursor: pointer;
+}
+
+
+
+/* Create */
+
+
+.details {
+    padding-left: 231px;
+    padding-top: 81px;
+}
+
+
+.details h3 {
+    font-family: 'Roboto';
+    font-weight: bold;
+    font-size: 24px;
+    color: #111111;
+}
+
+.item {
+    font-family: 'Roboto';
+    font-weight: bold;
+    font-size: 16px;
+    color: #111111;
+    padding-top: 30px;
+}
+
+.item .title {
+    margin-bottom: 10px;
+}
+
+input[type="text"] {
+    background: #FFFFFF;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    width: 940px;
+    height: 49px;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 16px;
+    color: #111111;
+    padding-left: 20px;
+}
+
+input[type="url"] {
+    background: #FFFFFF;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    width: 940px;
+    height: 49px;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 16px;
+    color: #111111;
+    padding-left: 20px;
+}
+
+.add-ingredient, .add-passo {
+    font-family: 'Roboto';
+    font-weight: bold;
+    font-size: 16px;
+    color: #6558C3;
+    background: none;
+    text-align: left;
+}
+
+.ingredient, .passo {
+    padding-bottom: 12px;
+}
+
+
+.item textarea {
+    background: #FFFFFF;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    width: 941px;
+    height: 302px;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 16px;
+    color: #111111;
+    padding-left: 20px;
+    padding-top: 18px;
+}
+
+button[type="submit"] {
+    margin-left: 820px;
+    background: #6558C3;
+    border-radius: 4px;
+    width: 139px;
+    height: 37px;
+    font-family: 'Roboto';
+    font-weight: bold;
+    color: #FFFFFF;
+    cursor: pointer;
+    position: absolute;
+    top: 157px;
+}
