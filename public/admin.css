@@ -286,10 +286,18 @@ button[type="submit"] {
     border-radius: 4px;
     width: 139px;
     height: 37px;
+    font-size: 16px;
     font-family: 'Roboto';
     font-weight: bold;
     color: #FFFFFF;
     cursor: pointer;
     position: absolute;
     top: 157px;
+}
+
+#form-delete button[type="submit"] {
+    background: #DC4747;
+    border-radius: 4px;
+    width: 92px;
+    left: 130px;
 }

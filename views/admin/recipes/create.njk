@@ -2,50 +2,14 @@
 
 {% block content %}
 
-<div class="card">
+<form class="card" method="POST" action="/receitas">
     <section class="details">
 
         <h3>Criando receita</h3>
-        <button type="submit">Salvar receita</button>
-        <div class="item">
-                <div class="title">Imagem da receita</div>
-                <div>
-                    <input 
-                        type="url" 
-                        name="img_url" 
-                    >
-                </div>
 
-                <div class="item">
-                <div class="title">Ingredientes</div>
-                    <div id="ingredients">
-                        <div class="ingredient">
-                            <input type="text" name="ingredients[]" value="" placeholder="Ingrediente" />
-                    </div>
-                        </div>
-                    <button type="button" class="add-ingredient">Adicionar ingrediente</button>
+        {% include 'admin/recipes/fields.njk' %}
 
-                <div class="item">
-                    
-                <div class="title">Modo de preparo</div>
-                <div>
-                    <div id="passos">
-                        <div class="passo">
-                            <input type="text" name="passos[]" value="" placeholder="Passo" />
-                    </div>
-                        </div>
-                    <button type="button" class="add-passo">Adicionar novo passo</button>
-                </div> 
-                
-
-                <div class="item">
-                <div class="title">Informações adicionais</div>
-                <div>
-                    <textarea name="name" cols="30" rows="10"></textarea>
-                </div>   
-
-           
-
-<script src="/js/button.js"></script>
+    </section>
+</form>
 
 {% endblock content %}
