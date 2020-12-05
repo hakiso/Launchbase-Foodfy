@@ -3,12 +3,22 @@
 {% block content %}
 
 <div class="card">
-
     <section class="details">
 
     <form method="POST" action="/receitas?_method=PUT">
         
             <h3>Editar receita</h3>
+           {% include 'admin/recipes/fields.njk' %}
+    </form>
 
-           
+        <form id="form-delete" action="/receitas?_method=DELETE" method="POST">
+        <input type="hidden" name="id" value={{receita.id}}>
+        <button type="submit">Deletar</button>
+        </form>
+
+
+    </section>
+
+{% include 'admin/recipes/delete.njk' %}
+
 {% endblock content %}
