@@ -1,0 +1,17 @@
+{
+  "recipes": [
+    {
+      "id": 1,
+      "img_url": "https://images.unsplash.com/photo-1513104890138-7c749659a591",
+      "ingredients": [
+        "3kg de carne moída (escolha uma carne magra e macia);",
+        "300g de bacon moído;"
+      ],
+      "passos": [
+        "Misture a carne com temperos de sua escolha",
+        "Coloque a carne na churrasqueira por 2 minutos cada lado"
+      ],
+      "adicional_info": "Preaqueça a chapa, frigideira ou grelha por 10 minutos antes de levar os hambúrgueres. Adicione um pouquinho de óleo ou \r\nmanteiga e não amasse os hambúrgueres!"
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 const express = require('express')
 const routes = express.Router()
 const receitas = require('./data')
-
+const admin = require('./controllers/admin')
 
 
 // SITE //
@@ -33,25 +33,15 @@ routes.get('/admin', function(req, res) {
     return res.redirect("/admin/recipes")
 })
 
-routes.get('/admin/recipes', function(req, res) {
-    return res.render("admin/recipes/index", { receitas })
-})
+routes.get("/admin/recipes/", admin.index);
+routes.get("/admin/recipes/create", admin.create);
 
-routes.get('/admin/recipes/create', function(req, res) {
-    return res.render("admin/recipes/create")
-})
+routes.post("/admin/recipes", admin.post)
+
 
 routes.get("/admin/recipes/:index",function(req, res){
     const receitaId = req.params.index;
     return res.render('admin/recipes/show', { receita: receitas[receitaId] })
-})
-
-routes.get('/admin/recipes/create', function(req, res) {
-    return res.render("admin/recipes/create", { receitas })
-})
-
-routes.post("/receitas", function(req, res) {
-    return res.send("recebido")
 })
 
 routes.get("/admin/recipes/edit/:index",function(req, res){
