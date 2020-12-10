@@ -5,17 +5,19 @@
 <div class="card">
     <section class="details">
 
-    <form method="POST" action="/receitas?_method=PUT">
+    <form method="POST" action="/admin/recipes/?_method=PUT">
         
-            <h3>Editar receita</h3>
-           {% include 'admin/recipes/fields.njk' %}
-    </form>
+        <h3>Editando receita</h3>
+    <button type="submit">Salvar receita</button>
 
-        <form id="form-delete" action="/receitas?_method=DELETE" method="POST">
-        <input type="hidden" name="id" value={{receita.id}}>
-        <button type="submit">Deletar</button>
+        {% include 'admin/recipes/fields.njk' %}
+        <input type="hidden" name="id" value={{recipe.id}}>
         </form>
 
+        <form id="form-delete" action="/admin/recipes?_method=DELETE" method="POST">
+        <button type="submit">Deletar</button>
+        <input type="hidden" name="id" value="{{recipe.id}}">
+    </form>
 
     </section>
 

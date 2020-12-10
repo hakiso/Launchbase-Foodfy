@@ -1,6 +1,7 @@
 const express = require('express')
 const routes = express.Router()
 const receitas = require('./data')
+const recipes = require('./data.json')
 const admin = require('./controllers/admin')
 
 
@@ -35,18 +36,13 @@ routes.get('/admin', function(req, res) {
 
 routes.get("/admin/recipes/", admin.index);
 routes.get("/admin/recipes/create", admin.create);
+routes.get("/admin/recipes/edit/:id", admin.edit);
+
 
 routes.post("/admin/recipes", admin.post)
+routes.get("/admin/recipes/:id", admin.show);
+routes.put("/admin/recipes", admin.put);
+routes.delete("/admin/recipes", admin.delete);
 
-
-routes.get("/admin/recipes/:index",function(req, res){
-    const receitaId = req.params.index;
-    return res.render('admin/recipes/show', { receita: receitas[receitaId] })
-})
-
-routes.get("/admin/recipes/edit/:index",function(req, res){
-    const receitaId = req.params.index;
-    return res.render('admin/recipes/edit', { receita: receitas[receitaId] })
-})
 
 module.exports = routes
