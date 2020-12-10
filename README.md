@@ -35,7 +35,7 @@
 ------
 <h3>Página de editar a receita</h3>
 <p>
-  <img src="https://i.postimg.cc/kXxq9grq/image.png" alt="editar">
+  <img src="https://i.postimg.cc/nhjKMgkF/image.png" alt="editar">
 </p>
 
 ------
