@@ -33,6 +33,12 @@
 
 
 ------
+<h3>Página de editar a receita</h3>
+<p>
+  <img src="https://i.postimg.cc/kXxq9grq/image.png" alt="editar">
+</p>
+
+------
 ## Tecnologias usadas no projeto
 
 ### **Backend:**
