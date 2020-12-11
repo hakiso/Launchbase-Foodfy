@@ -12,23 +12,26 @@ exports.create = function(req, res) {
 }
 
 // post
-exports.post =  function(req, res) {
-    
-    const keys = Object.keys(req.body)
+exports.post = function(req, res){
 
-    for(key of keys) {
-        
-        if (req.body[key] == "") {
-            return res.send("Please, fill all fields!")
-        }
-    }
+    const keys = Object.keys(req.body);
 
     let {img_url, ingredients, preparos, adicional_info } = req.body;
 
-    const id = Number(data.recipes.length + 1)
+    for(let key of keys) {
+        if(req.body[key] == "")
+            return res.send("Please, fill all inputs!")
+    }
+
+    let id = 1;
+    const lastId = data.recipes[data.recipes.length - 1]
+
+    if(lastId) {
+        id = lastId.id + 1
+    } 
 
 
-    data.recipes.push({
+    data.recipes.push ({
         id,
         img_url,
         ingredients,
@@ -36,13 +39,12 @@ exports.post =  function(req, res) {
         adicional_info
     })
 
-    fs.writeFile("data.json", JSON.stringify(data, null, 2), function(err){
-        if (err) return res.send("Runtime Error!")
+    fs.writeFile("data.json",JSON.stringify(data,null,2), function(err){
+        if(err) return res.send("Write file error!")
+
 
         return res.redirect("/admin/recipes")
     })
-
-    //return res.send(req.body)
 }
 
 // show
@@ -91,12 +93,12 @@ exports.put = function(req, res){
         ...req.body,
         ingredients: arrayFix(req.body.ingredients),
         preparos: arrayFix(req.body.preparos),
-            id: Number(req.body.id)
+        id: Number(req.body.id)
     }
 
     data.recipes[index] = recipe
 
-    fs.writeFile("../data.json",JSON.stringify(data,null,2), function(err){
+    fs.writeFile("data.json",JSON.stringify(data,null,2), function(err){
         if(err) return res.send("Write file error!")
 
 
@@ -114,7 +116,7 @@ exports.delete = function(req, res){
 
     data.recipes = filterRecipes
 
-    fs.writeFile("../data.json",JSON.stringify(data,null,2), function(err){
+    fs.writeFile("data.json",JSON.stringify(data,null,2), function(err){
         if(err) return res.send("Write file error!")
 
 

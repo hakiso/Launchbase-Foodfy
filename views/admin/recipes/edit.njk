@@ -5,7 +5,7 @@
 <div class="card">
     <section class="details">
 
-    <form method="POST" action="/admin/recipes/?_method=PUT">
+    <form method="POST" action="/admin/recipes?_method=PUT">
         
         <h3>Editando receita</h3>
     <button type="submit">Salvar receita</button>
@@ -16,6 +16,7 @@
 
         <form id="form-delete" action="/admin/recipes?_method=DELETE" method="POST">
         <button type="submit">Deletar</button>
+        
         <input type="hidden" name="id" value="{{recipe.id}}">
     </form>
 
