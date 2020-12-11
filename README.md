@@ -38,10 +38,6 @@
   <img src="https://i.postimg.cc/nhjKMgkF/image.png" alt="editar">
 </p>
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 9f47bcd06511f7c7e9e201149f797eaebb4fecdb
 ------
 ## Tecnologias usadas no projeto
 
@@ -58,4 +54,3 @@
 >* HTML
 
 >* CSS3
-
