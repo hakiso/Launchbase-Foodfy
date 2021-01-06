@@ -13,6 +13,7 @@ header .topo {
 
 header .logo {
     padding: 32px 231px;
+    display: flex;
 }
 
 .title {
@@ -21,7 +22,7 @@ header .logo {
 }
 
 .title h2 {
-    padding: 32px 231px 20px;
+    padding: 50px 231px 20px;
     font-family: 'Roboto';
     font-weight: bold;
     font-size: 24px;
@@ -37,7 +38,7 @@ header .logo {
     color: #FFFFFF;
     cursor: pointer;
     display: table;
-    margin: 28px auto 0 32px;
+    margin: 50px auto 0 32px;
     padding: 8px 16px;
     text-decoration: none;
 }
@@ -62,7 +63,7 @@ header .logo {
     color: #6558C3;
     text-decoration: none;
     position: absolute;
-    padding-top: 52px;
+    margin-top: 52px;
 }
 
 .container :last-child div {
@@ -129,8 +130,9 @@ header .logo {
 }
 
 .recipe .banner-img img {
-    width: 100%;
+    width: 940px;
     border-radius: 15px;
+    height: 280px;
 }
 
 .recipe .card-title{
@@ -239,6 +241,25 @@ input[type="text"] {
     padding-left: 20px;
 }
 
+input, select {
+    background: #FFFFFF;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    width: 940px;
+    height: 49px;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 16px;
+    color: #111111;
+    padding-left: 20px;
+}
+
+select {
+    background-position: right 5px top; 
+    padding : 15px 20px;
+    width: 57.6%
+}
+
 input[type="url"] {
     background: #FFFFFF;
     border: 1px solid #DDDDDD;
@@ -300,4 +321,188 @@ button[type="submit"] {
     border-radius: 4px;
     width: 92px;
     left: 130px;
+}
+
+.active {
+    filter: brightness(10.0);
+}
+
+
+/* Chef */
+
+header .menu a {
+    font-family: 'Roboto'; 
+    font-weight: bold;
+    font-size: 15px;
+    color: #999999;
+    text-decoration: none;
+    margin-left: 30px;
+}
+
+.logo .menu {
+    padding: 5px;
+    padding-left: 28px;
+}
+
+.chefes {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 30px;
+    padding-left: 230px;
+    margin-right: 600px;
+}
+
+.receitas1 h2 {
+    max-width: 980px;
+    width: 90%;
+    text-align: left;
+    padding-left: 231px;
+    font-family: 'Roboto';
+    font-weight: bold;
+    font-size: 24px;
+    color: #111111;
+    padding-bottom: 30px;
+}
+
+.gridf {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.cards {
+    display: flex;
+    text-align: left;
+    padding-left: 231px;
+}
+
+.cards .images img {
+    width: 172px;
+    height: 80px;
+    border-radius: 8.57%;
+    margin-right: 20px;
+}
+
+.chefes .chef img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+}
+
+.foodcardtxt .nome {
+    font-size: 18px;
+    color: #111111;
+    font-family: 'Roboto';
+    font-weight: bold;
+}
+
+.foodcardtxt .autor {
+    font-size: 14px;
+    color: #777777;
+    font-family: 'Roboto';
+    font-weight: 400;
+}
+
+.foodcardtxt a {
+    font-family: 'Roboto';
+    font-weight: bold;
+    font-size: 14px;
+    color: #6558C3;
+    text-decoration: none;
+    position: absolute;
+    margin-top: 10px;
+}
+
+.chefes a {
+    font-family: 'Roboto';
+    font-weight: bold;
+    font-size: 14px;
+    color: #6558C3;
+    text-decoration: none;
+    position: absolute;
+    margin-top: 42px;
+}
+
+.container :last-child div {
+    display: inline-flex;
+}
+
+.container :last-child div h3 {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 18px;
+    color: #111111;
+}
+
+.chef h3 {
+    padding-top: 10px;
+    cursor: text;
+}
+
+.container :last-child div p {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 14px;
+    color: #777777;
+    position: absolute;
+    padding-top: 24px;
+}
+
+.chefe .titulo {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    padding-top: 50px;
+    margin-right: 230px;
+}
+
+.chefe .titulo h1 {
+    padding-left: 231px;
+    font-family: 'Roboto';
+    font-weight: bold;
+    font-size: 24px;
+    color: #111111;
+}
+
+.chefe .titulo a {
+    background-color: #6558C3;
+    border-radius: 4px;
+    font-family: 'Roboto';
+    font-weight: bold;
+    font-size: 16px;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: table;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.chefe .banner-img {
+    text-align: center;
+    padding-top: 51px;
+}
+
+.chefe .banner-img img {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+}
+
+.chefe .card-title {
+    text-align: center;
+}
+
+.chefe .card-title .chef_name {
+    font-family: 'Roboto';
+    font-weight: bold;
+    font-size: 36px;
+    color: #111111;
+    padding-top: 30px;
+}
+
+.chefe .card-title .chef_recipes {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 20px;
+    color: #777777;
+    padding-bottom: 4px;
 }

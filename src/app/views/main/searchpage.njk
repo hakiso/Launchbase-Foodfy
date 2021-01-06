@@ -1,0 +1,36 @@
+{% extends 'layout.njk' %}
+
+{% block title%}
+    <title>Receitas -Foodfy</title>
+{%endblock%}
+
+{% block content%} 
+<div class="food">
+    <section>
+        <div>
+        <p class="search">Buscando por “{{filter}}”</p>
+        </div>
+         <div class='gridf'>
+            {% for recipe in recipes%}
+            <div class="card" id="{{recipe.id}}">
+              <div class="images">
+                <a href="/main/receita/{{recipe.id}}">
+                <img src="{{recipe.image}}" alt="" />
+                </a>
+              </div><!-- /images -->
+                <div class="foodcardtxt">
+                  <p class="nome_recipe">{{recipe.title}}</p>
+                  <p class="autor">por {{chef.name}}</p>
+                </div><!-- /foodcard  -->
+                </div>
+                {%endfor%}
+        </div><!-- /mais-acessadas -->
+      </section>
+{% block paginate %}
+{% include "./paginate.njk" %}
+{% endblock paginate %}
+
+    <script src="/js/script.js"></script>
+
+      
+{%endblock%}

@@ -1,0 +1,48 @@
+{% extends 'layout.njk' %}
+
+{%block css%}
+  <link rel="stylesheet" href="fodfystyles.css">
+{%endblock%}
+
+{% block content %}
+      <main>
+          <!-- INICIO MELHORES RECEITAS -->
+        <section class='melhores-receitas'>
+          <div class='container'>
+              <div class="melhores-receitas__texto">
+                  <h2>As melhores receitas</h2>
+                  <p class="descricao">
+                    Aprenda a construir os melhores pratos com receitas criadas por profissionais do mundo inteiro.
+                  </p>
+              </div>
+
+              <div class="melhores-receitas__chefe">
+                <img class="img-fluid" src="img/chef.png" alt="Chefe">
+              </div>
+          </div>
+        </section>
+
+        <!-- INICIO MAIS ACESSADAS -->
+        <section>
+          <div class='mais-acessadas'>
+            <h2>Mais acessadas</h2>
+            <div class='gridf2'>
+              {% for recipe in recipes %}
+                <div class="receita_foodfy">
+                      <a href="/main/receita/{{recipe.id}}">
+                    <img src="{{recipe.image}}" alt="">
+                    </a>
+                    <div class="receita_details">
+                        <h3 class="nome_recipe">{{recipe.title}}</h3>
+                        <p class="autor">por {{recipe.chef_name}}</p>
+                    </div>
+                </div>
+            {% endfor %}
+             
+          </div><!-- /mais-acessadas -->
+        </section>
+      </main>
+
+       <script src="/js/script.js"></script>
+      <!-- FIM MAIS ACESSADAS -->
+{%endblock%}
