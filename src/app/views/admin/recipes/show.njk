@@ -15,36 +15,75 @@
              <h1>Receita: {{recipe.title}}</h1>
              <a href="/admin/recipes/edit/{{recipe.id}}">Editar receita</a>
          </div>
-        <div class="banner-img">
-            <img src="{{recipe.image}}" alt="Imagem de {{recipe.image}} ">
+
+<div class="gallery">
+    <div class="highlight">
+        {% if not files[0] %} {#se não houver imagem #}
+            <img src="http://placehold.it/500x500?text=RECEITA SEM FOTO">
+        {% else %}
+            <img 
+                src="{{files[0].src}}" 
+                alt="{{files[0].name}}"
+                onclick="Lightbox.open()">
+        {% endif %}
+
+        <div class="lightbox_target">
+            <img 
+                src="{{files[0].src}}" 
+                alt="{{files[0].name}}">
+                <a 
+                    href="#" 
+                    class="lightbox_close"
+                    onclick = "Lightbox.close()">
+                    <i class="material-icons">close</i>
+                </a>
         </div>
+    </div>
+
+    <div class="gallery_preview">
+        {% for image in files %}
+        <img 
+            src="{{image.src}}" 
+            alt="{{image.name}}"
+            {% if loop.index0 == 0 %}
+            class="active"
+            {% endif %}
+            onclick="Image_Gallery.set_image(event)"
+            >
+        {% endfor %}
+    </div>
+</div>
+
         <div class="card-title">
-           <h1>{{recipe.title}}</h1>
-           <p>por {{recipe.chef_name}}</p>
+            <h1>{{recipe.title}}</h1>
+            <p>por {{chef.name}}</p>
         </div>
         <div class="topic " id="ingredients">
         <h1>Ingredientes</h1> 
         <div class="topic-content">
             <ul>
-               {% for ingredient in recipe.ingredients%}
-               <li>{{ingredient}}</li>
-               {%endfor%}
+                {% for ingredient in recipe.ingredients%}
+                <li>{{ingredient}}</li>
+                {%endfor%}
             </ul>
         </div>
         </div>
         <div class="topic" id="preparation">
         <h1>Modo de preparo</h1> 
             <ul>
-               {% for preparation in recipe.preparation%}
-               <li>{{preparation}}</li>
-               {%endfor%}
+                {% for preparation in recipe.preparation%}
+                <li>{{preparation}}</li>
+                {%endfor%}
             </ul>
-          </div>
+            </div>
         </div>
         <div class="topic" id="information">
         <h1>Informações adicionais</h1> 
             <p>{{recipe.information}}</p>
         </div>
         </div>
+        </section>
+
+<script src="/script.js"></script>
     
 {%endblock%}

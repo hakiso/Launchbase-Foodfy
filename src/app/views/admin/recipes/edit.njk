@@ -3,14 +3,15 @@
 {% block content %}
 
 <div class="card">
-    <section class="details">
-
-    <form method="POST" action="/admin/recipes?_method=PUT">
+    <form method="POST" action="/admin/recipes?_method=PUT" enctype="multipart/form-data" >
+<section class="details">
         
         <h3>Editando receita</h3>
     <button type="submit">Salvar receita</button>
 
-        {% include 'admin/recipes/fields.njk' %}
+        <div class="fields">
+            {% include 'admin/recipes/fields.njk' %}
+        </div>
         <input type="hidden" name="id" value="{{recipe.id}}">
         </form>
 

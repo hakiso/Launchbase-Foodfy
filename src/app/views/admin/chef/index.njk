@@ -9,7 +9,7 @@
         <div class="chefes">
             {% for chef in chefs %}
                 <div class="chef">
-                    <img src="{{chef.avatar_url}}" alt="">
+                    <img src="{{chef.src}}" alt="">
                     <div style="padding-left: 20px;">
                         <h3 class="nome">{{chef.name}}</h3>
                         <a href="/admin/chef/{{chef.id}}">Visualizar</a>

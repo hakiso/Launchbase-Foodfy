@@ -8,15 +8,18 @@
         >
     </div>
 </div>
-
 <div class="item">
     <div class="title">Avatar</div>
-    <div>
+    <input type="text" id="chef-avatar-input-text" name="avatar_url" value="{{file.src}}" readonly="readonly" style="margin-bottom: 15px">
+    <div class="chef_button">
+        Enviar Avatar
         <input 
-            type="url"
+            id="photo_chef"
+            type="file"
             name="avatar_url"
-            value="{{chef.avatar_url}}"
-            placeholder="https://"
+            value="{{file.src}}"
+            accept="image/*"
+            onchange="PhotosUpload.handleFileInput(event)"
         >
     </div>
 </div>

@@ -3,11 +3,11 @@
 {% block content%}
      <section class="receita">
         <div class="banner-img">
-            <img src="{{recipe.image}}" alt="Imagem de {{recipe.image}} ">
+            <img src="{{files[0].src}}" alt="Imagem de {{recipe.image}} ">
         </div>
         <div class="card-title">
            <h1>{{recipe.title}}</h1>
-           <p>por {{recipe.chef_name}}</p>
+           <p>por {{chef.name}}</p>
         </div>
         <div class="topic " id="ingredients">
         <h1>Ingredientes <a>ESCONDER</a></h1> 

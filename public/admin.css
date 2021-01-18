@@ -123,17 +123,6 @@ header .logo {
 }
 
 
-.recipe .banner-img {
-    margin: 0 auto;
-    width: 940px;
-    height: 280px;
-}
-
-.recipe .banner-img img {
-    width: 940px;
-    border-radius: 15px;
-    height: 280px;
-}
 
 .recipe .card-title{
     text-align: center;
@@ -323,7 +312,7 @@ button[type="submit"] {
     left: 130px;
 }
 
-.active {
+.active2 {
     filter: brightness(10.0);
 }
 
@@ -505,4 +494,189 @@ header .menu a {
     font-size: 20px;
     color: #777777;
     padding-bottom: 4px;
+}
+
+
+.item .chef_button {
+    position: relative;
+    width: 139px;
+    height: 37px;
+    color: #FFFFFF;
+    font-size: 16px;
+    line-height: 19px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    background-color: #6558C3;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.item .chef_button #photo_chef {
+    width: 139px;
+    height: 37px;
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    cursor: pointer;
+    display: block;
+    overflow: hidden;
+}
+
+
+/* Photos Upload */
+.fields .item .container-uploader {
+    width: 100%;
+    min-height: 149px;
+    display: grid;
+    grid-template-columns: 149px 1fr;
+    justify-content: center;
+    grid-gap: 8px;
+}
+
+.fields .item .container-uploader #photos-upload {
+    position: relative;
+    display: grid;
+    align-items: center;
+    overflow: hidden;
+    width: 149px;
+    height: 149px;
+    color: #777777;
+    border: 1px solid #DDDDDD;
+    border-radius: 3.5px;
+}
+
+.fields .item .container-uploader #photos-upload .material-icons {
+    font-size: 50px;
+    text-align: center;
+}
+
+.fields .item .container-uploader #photos-upload #photos-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+#photos-preview {
+    display: grid;
+    grid-template-columns: 150px 150px 150px 150px 150px;
+    grid-gap: 8px;
+    width: 100%;
+}
+#photos-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#photos-preview .photo {
+    position: relative;
+    width: 151px;
+    height: 150px;
+}
+#photos-preview .photo i {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: red;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: opacity 200ms;
+    opacity: 0;
+}
+#photos-preview .photo:hover i {
+    opacity: 1;
+    grid-gap: 0;
+    margin-top: 0;
+}
+
+/* Gallery */
+
+.highlight > img{
+    width: 940px; 
+    height: 280px;
+    border-radius: 15px;
+    margin-left: 230px;
+    margin-top: 24px;
+    cursor: zoom-in;
+}
+
+.gallery_preview{
+    margin-top: 8px;
+    margin-left: 880px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    margin-right: 240px;
+    gap: 10px;
+}
+
+.gallery_preview img{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    opacity: 0.6;
+    cursor: pointer;
+    transition: 200ms;
+    border-radius: 4px;
+}
+
+.gallery_preview img:hover,
+.gallery_preview img.active{
+    opacity: 1;
+}
+
+/*LIGHTBOX GALLERY*/
+
+.highlight .lightbox_target{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    overflow:hidden;
+    z-index: 100;
+    left: 0;
+    top:-100%;
+    opacity: 0;
+    transition: opacity 400ms;   
+}
+
+.highlight .lightbox_target img{
+    margin: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: white;
+    border-radius: 15px;
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+}
+
+.highlight a.lightbox_close{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: white;
+    color: red;
+    font-weight: bold;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 400ms;
+    position: absolute;
+    right: 90px;
+    margin-top: 50px;
 }
