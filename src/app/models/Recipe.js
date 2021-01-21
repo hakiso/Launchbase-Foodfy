@@ -109,7 +109,7 @@ module.exports = {
           FROM recipes
           LEFT JOIN chefs ON (recipes.chef_id = chefs.id)
           ${filterQuery}
-          ORDER BY recipes.title ASC
+          ORDER BY recipes.updated_at DESC
           LIMIT $1 OFFSET $2
         `
     
@@ -117,7 +117,7 @@ module.exports = {
       
     },
     receitas(params) {
-        const { filter, limit, offset, callback } = params
+        const { filter, limit, offset } = params
 
         let query = "",
             filterQuery = "",
@@ -140,7 +140,7 @@ module.exports = {
         FROM recipes
         LEFT JOIN chefs ON (recipes.chef_id = chefs.id)
         ${filterQuery}
-        ORDER BY recipes.title ASC
+        ORDER BY recipes.created_at DESC
         LIMIT $1 OFFSET $2
         `
         return db.query(query , [limit, offset])

@@ -121,8 +121,7 @@ module.exports = {
                 return res.send('Please, fill all fields!')
             }
         }
-
-
+        
         if (req.files.lenght != 0) {
             const filesPromise = req.files.map(file => File.create({...file}))
             const fileResults = await Promise.all(filesPromise)

@@ -113,7 +113,7 @@ module.exports = {
             src: `${req.protocol}://${req.headers.host}${file.path.replace("public", "")}`
         }))
         
-        return res.render("main/receita", { recipe, chef, files })
+        return res.render("main/receitas", { recipe, chef, files })
     },
     async searchpage(req, res) {
         try{
@@ -130,7 +130,7 @@ module.exports = {
                 offset
         }
         
-        let results = await Recipe.receitas(params)
+        let results = await Recipe.searchpage(params)
         const recipes = results.rows
 
         const pagination ={
