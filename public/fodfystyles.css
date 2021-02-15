@@ -336,6 +336,10 @@ main {
   padding-bottom: 30px;
 }
 
+.recipes-card {
+  margin-right: 133px;
+}
+
 .receita .topic h1{
   padding-bottom: 19px;
   font-family: 'Roboto';

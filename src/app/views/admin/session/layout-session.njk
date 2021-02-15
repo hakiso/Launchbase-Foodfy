@@ -8,7 +8,7 @@
 
 
 {%block css%}
-    <link rel="stylesheet" href="/admin.css">
+    <link rel="stylesheet" href="/session.css">
     <link rel="stylesheet" href="/messages.css">
 {%endblock%}
 
@@ -17,9 +17,12 @@
 {%endblock%}
 </head>
 <body>
-            {%include "admin/parts/header.njk"%}
-            
-            {%include "admin/parts/messages.njk"%}
+    <header>
+        <div class="logo">
+            <a href="/main"><img src="/img/logo.png" alt=""></a>
+    </header>
+
+        {%include "admin/parts/messages.njk"%}
 
     {% block content %}
     {%endblock%}
@@ -28,6 +31,7 @@
 
     <script src="/scripts.js"></script>
 
+    </footer>
 
 </body>
 </html>

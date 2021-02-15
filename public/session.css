@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.logo {
+    text-align: center;
+    margin-top: 35px;
+}
+
+.logo img {
+    font-family: 'Cochin';
+    font-size: 28px;
+    color: #111111;
+    letter-spacing: 1.65px;
+}
+
+/* Login */
+
+.login.container {
+    text-align: center;
+    margin-top: 140px;
+}
+
+.header h3 {
+    font-family: 'Helvetica';
+    font-weight: bold;
+    font-size: 24px;
+    color: #111111;
+    text-align: center;
+    padding-bottom: 35px;
+}
+
+.login.container input[type="email"],
+input[type="password"] {
+    background: #FFFFFF;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    width: 500px;
+    height: 49px;
+    padding-left: 14px;
+    font-family: Helvetica;
+    font-size: 16px;
+    color: #999999;
+}
+
+.item {
+    margin-top: 35px;
+}
+
+.item .name {
+    margin-left: 702px;
+    margin-bottom: 10px;
+    font-family: 'Helvetica';
+    font-weight: bold;
+    font-size: 16px;
+    color: #111111;
+    text-align: left;
+}
+
+.button {
+    position: fixed;
+    background: #6558C3;
+    border-radius: 4px;
+    width: 134px;
+    height: 37px;
+    font-family: 'Helvetica';
+    font-weight: bold;
+    font-size: 16px;
+    color: #FFFFFF;
+    text-align: center;
+    cursor: pointer;
+    margin-left: 1084px;
+}
+
+.button-footer {
+    display: flex;
+    align-items: center;
+}
+
+.button-footer a {
+    padding-left: 704px;
+    text-decoration: none;
+    font-family: 'Helvetica';
+    font-weight: bold;
+    font-size: 16px;
+    color: #969696;
+}
+
+
+/* Forgot-Password */
+
+.forgot-password {
+    text-align: center;
+    margin-top: 140px;
+}
+
+.header-forgot h3 {
+    font-family: 'Helvetica';
+    font-weight: bold;
+    font-size: 24px;
+    color: #111111;
+    text-align: center;
+    padding-bottom: 35px;
+}
+
+.forgot-password input[type="email"],
+input[type="password"] {
+    background: #FFFFFF;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    width: 500px;
+    height: 49px;
+    padding-left: 14px;
+    font-family: Helvetica;
+    font-size: 16px;
+    color: #999999;
+    margin-bottom: 35px;
+}
+
+.buttonR {
+    background: #6558C3;
+    border-radius: 4px;
+    width: 134px;
+    height: 37px;
+    font-family: 'Helvetica';
+    font-weight: bold;
+    font-size: 16px;
+    color: #FFFFFF;
+    text-align: center;
+    cursor: pointer;
+    margin-left: 382px;
+}
+
+/* Reset-Password */
+
+.password-reset {
+    text-align: center;
+    margin-top: 140px;
+}
+
+.password-reset input[type="email"],
+input[type="password"] {
+    background: #FFFFFF;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    width: 500px;
+    height: 49px;
+    padding-left: 14px;
+    font-family: Helvetica;
+    font-size: 16px;
+    color: #999999;
+    margin-bottom: 35px;
+}

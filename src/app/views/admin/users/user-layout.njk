@@ -8,7 +8,7 @@
 
 
 {%block css%}
-    <link rel="stylesheet" href="/admin.css">
+    <link rel="stylesheet" href="/user.css">
     <link rel="stylesheet" href="/messages.css">
 {%endblock%}
 
@@ -16,11 +16,12 @@
     <title>Foodfy</title>
 {%endblock%}
 </head>
-<body>
-            {%include "admin/parts/header.njk"%}
-            
-            {%include "admin/parts/messages.njk"%}
 
+<body>
+        {%include "admin/parts/messages.njk"%}
+
+        {%include "admin/parts/header.njk"%}
+    
     {% block content %}
     {%endblock%}
 

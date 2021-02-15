@@ -1,0 +1,30 @@
+{% extends "admin/session/layout-session.njk" %}
+
+
+{% block content %}
+<section class="login container form">
+    <form method="POST" action="/admin/users/login">
+
+        <div class="header">
+            <h3>Iniciar Sessão</h3>
+        </div>
+
+
+        <div class="fields">
+            {% include 'admin/session/fields.njk' %}
+        </div>
+
+        <div class="button-footer">
+
+        <button onclick="Validate.allFields(event)" class="button" type="submit">Acessar</button>
+
+        <div class="button-footer">
+            <ul>
+                <a href="/admin/users/forgot-password">Perdeu a senha?</a>
+            </ul>
+        </div>
+        </div>
+    </form>
+</section>
+
+{% endblock content %}

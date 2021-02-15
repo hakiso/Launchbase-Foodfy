@@ -1,0 +1,35 @@
+{% extends 'admin/users/user-layout.njk' %}
+
+{% block head %}
+    <title>Foodfy - Atualizar Usuário</title>
+{% endblock %}
+
+{% block content %}
+
+<section class="card">
+    <form method="POST" action="/admin/users/profile?_method=PUT">
+<section class="details">
+        <div class="header">
+            <h3>Bem-vindo {{ user.name }}</h3>
+        </div>
+
+        <button class="buttonS2" type="submit">Salvar</button>
+
+        <div class="fields">
+            {% include 'admin/users/fields.njk' %}
+        </div>
+         <div class="password">
+                    <div>Senha</div>
+
+                    <input type="password" name="password" placeholder="Digite a senha" required="required">
+                </div>
+            </div>
+
+            <input type="hidden" name="id" value="{{user.id}}">
+    </section>
+
+    {% if session.isAdmin %}
+    {% include 'admin/users/delete.njk' %}
+    {% endif %}
+
+{% endblock content %}

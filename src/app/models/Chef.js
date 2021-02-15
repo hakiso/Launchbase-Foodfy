@@ -88,7 +88,7 @@ module.exports = {
         })
       }
       catch (err) {
-        console.error(err)
+        console.error(err) 
       }
     },
     file(id) {

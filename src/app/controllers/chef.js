@@ -4,7 +4,10 @@ const Recipe = require('../models/Recipe')
 
 module.exports = {
     async index(req, res) {
+        let { success, error } = req.session
+        req.session.success = "", req.session.error = ""
         let results = await Chef.all()
+
         const chefs = results.rows
 
         async function getImage(chefId){
@@ -22,35 +25,26 @@ module.exports = {
 
         const lastAdded = await Promise.all(chefsPromise)
     
-        return res.render('admin/chef/index', { chefs: lastAdded })
+        return res.render('admin/chefs/index', { chefs: lastAdded, success, error })
       },
     create(req, res){
-        return res.render("admin/chef/create")
+        return res.render("admin/chefs/create")
     },
     async post(req, res){
-        try {
-            const keys = Object.keys(req.body)
-            
-            for (key of keys) {
-              if (req.body[key] == "")
-              return res.send("Please, fill all fields!")
-            }
+        
+        let results = await File.create({ ...req.file })
+        const fileId = results.rows[0].id
+
+        results = await Chef.create(
+            req.body, 
+            fileId
+            )
+          const chefId = results.rows[0].id
+
+          req.session.success = "Chef criado com sucesso!"
       
-            let results = await File.create({ ...req.file })
-            const fileId = results.rows[0].id
-
-
-            results = await Chef.create(
-                req.body, 
-                fileId
-                )
-              const chefId = results.rows[0].id
-          
-              return res.redirect(`/admin/chef/${chefId}`)
-            } 
-            catch (err) {
-              console.error(err)
-            }
+          return res.redirect(`/admin/chefs`)
+        
     },
     async show(req, res) {
         let results = await Chef.find(req.params.id)
@@ -79,7 +73,7 @@ module.exports = {
 
         const lastAdded = await Promise.all(recipesPromise)
         
-        return res.render("admin/chef/show", { chef, recipes: lastAdded })
+        return res.render("admin/chefs/show", { chef, recipes: lastAdded })
     },
     async edit(req, res) {
         let results = await Chef.find(req.params.id)
@@ -92,16 +86,10 @@ module.exports = {
         
         chefFile.src = `${req.protocol}://${req.headers.host}${chefFile.path.replace("public", "")}`
         
-        return res.render ("admin/chef/edit", { chef, file: chefFile })
+        return res.render ("admin/chefs/edit", { chef, file: chefFile })
     },
     async put(req, res) {
         try {
-            const keys = Object.keys(req.body)
-            
-            for (key of keys) {
-              if (req.body[key] == "")
-              return res.send("Please, fill all fields!")
-            }
 
             let results = await Chef.find(req.body.id)
             let file_id = results.rows[0].file_id
@@ -119,7 +107,9 @@ module.exports = {
               await Chef.update_name(req.body)
             }
 
-            return res.redirect(`/admin/chef/${req.body.id}`)
+            req.session.success = "Chef atualizado com sucesso!"
+
+            return res.redirect(`/admin/chefs`)
         } 
         catch (err) {
           console.error(err)
@@ -142,9 +132,11 @@ module.exports = {
               // --> Deletando o chef e o arquivo do chefe buscado
             await Chef.delete(id);
             await File.delete(chef.file_id);
+
+            req.session.success = "Chef deletado com sucesso!"
         
             // --> Redirecionando para a pagina com todos os chefs.
-            return res.redirect("/admin/chef");
+            return res.redirect("/admin/chefs");
             }
             
           } catch (error) {

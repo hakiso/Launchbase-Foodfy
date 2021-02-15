@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+header .topo {
+    height: 80px;
+    background-color: #111111;
+}
+
+header .logo {
+    padding: 32px 231px;
+    display: flex;
+}
+
+header .menu a {
+    font-family: 'Roboto'; 
+    font-weight: bold;
+    font-size: 15px;
+    color: #999999;
+    text-decoration: none;
+    margin-left: 30px;
+}
+header .menu a.link-active {
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.active2 {
+    filter: brightness(10.0);
+}
+
+.header h3 {
+    font-family: 'Helvetica';
+    font-weight: bold;
+    font-size: 24px;
+    color: #111111;
+}
+
+.logo .menu {
+    padding: 5px;
+    padding-left: 28px;
+    display: flex;
+}
+
+.title {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.title h2 {
+    padding: 50px 231px 20px;
+    font-family: 'Roboto';
+    font-weight: bold;
+    font-size: 24px;
+    color: #111111;
+}
+
+.title .btn {
+    background-color: #6558C3;
+    border-radius: 4px;
+    font-family: 'Helvetica';
+    font-weight: bold;
+    font-size: 16px;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: table;
+    margin: 50px auto 0 32px;
+    padding: 8px 42px;
+    text-decoration: none;
+}
+
+/* Lista de usuários */
+
+.users {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-right: 370px;
+}
+
+.user {
+    padding-left: 230px;
+    padding-top: 42px;
+}
+
+.user h3 {
+    font-family: 'Helvetica';
+    font-size: 18px;
+    color: #111111;
+}
+
+.user p {
+    font-family: 'Helvetica';
+    font-size: 14px;
+    color: #777777;
+    padding-top: 4px;
+    padding-bottom: 16px;
+}
+
+.user a {
+    text-decoration: none;
+    font-family: 'Helvetica';
+    font-weight: bold;
+    font-size: 14px;
+    color: #6558C3;
+    margin-right: 16px;
+    margin-top: 1px;
+}
+
+.users .actions {
+    display: flex;
+}
+
+.users .actions .remove {
+    background: none;
+    font-family: 'Helvetica';
+    font-weight: bold;
+    font-size: 14px;
+    color: #F55A5A;
+    cursor: pointer;
+}
+
+/* Register */
+
+.details {
+    padding-left: 231px;
+    padding-top: 81px;
+}
+
+.buttonS[type="submit"] {
+    margin-left: 820px;
+    background: #6558C3;
+    border-radius: 4px;
+    width: 139px;
+    height: 37px;
+    font-size: 16px;
+    font-family: 'Roboto';
+    font-weight: bold;
+    color: #FFFFFF;
+    cursor: pointer;
+    position: absolute;
+    top: 157px;
+}
+
+.buttonC {
+    margin-left: 980px;
+    background: #8A8A8A;
+    border-radius: 4px;
+    width: 139px;
+    height: 37px;
+    font-size: 16px;
+    font-family: 'Roboto';
+    font-weight: bold;
+    color: #FFFFFF;
+    cursor: pointer;
+    position: absolute;
+    top: 157px;
+    text-decoration: none;
+    text-align: center;
+    line-height: 2.4;
+}
+
+.buttonD[type="submit"] {
+    margin-left: 820px;
+    background: #DC4747;
+    border-radius: 4px;
+    width: 139px;
+    height: 37px;
+    font-size: 16px;
+    font-family: 'Roboto';
+    font-weight: bold;
+    color: #FFFFFF;
+    cursor: pointer;
+    position: absolute;
+    top: 157px;
+}
+
+.buttonS2[type="submit"] {
+    margin-left: 980px;
+    background: #7159C1;
+    border-radius: 4px;
+    width: 139px;
+    height: 37px;
+    font-size: 16px;
+    font-family: 'Roboto';
+    font-weight: bold;
+    color: #FFFFFF;
+    cursor: pointer;
+    position: absolute;
+    top: 157px;
+}
+
+.button-exit {
+    background: none;
+    font-family: 'Helvetica';
+    font-weight: bold;
+    font-size: 15px;
+    color: #FFFFFF;
+    margin-left: 728px;
+    cursor: pointer;
+}
+
+.user-name {
+    position: fixed;
+    display: grid;
+}
+
+.user-name label, 
+.user-email label {
+    margin-bottom: 10px;
+    font-family: 'Helvetica';
+    font-weight: bold;
+    font-size: 16px;
+    color: #111111;
+}
+
+.user-email {
+    margin-left: 648px;
+    margin-top: 46px;
+    display: grid;      
+}
+
+.user-name input[type="text"] {
+    background: #FFFFFF;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    width: 450px;
+    height: 49px;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 16px;
+    color: #111111;
+    padding-left: 20px;
+}
+
+.user-email input[type="email"] {
+    background: #FFFFFF;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    width: 450px;
+    height: 49px;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 16px;
+    color: #111111;
+    padding-left: 20px;
+}
+
+.user-check-admin {
+    font-family: 'Helvetica';
+    font-weight: bold;
+    font-size: 16px;
+    color: #111111;
+    margin-top: 33px;
+}
+
+.user-check-admin input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/* Profile */
+
+.password :first-child {
+    font-family: 'Helvetica';
+    font-weight: bold;
+    font-size: 16px;
+    color: #111111;
+    padding-top: 36px;
+    margin-bottom: 10px;
+}
+
+input[type="password"] {
+    background: #FFFFFF;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    width: 450px;
+    height: 49px;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 16px;
+    color: #111111;
+    padding-left: 20px;
+}

@@ -1,28 +1,35 @@
 const db = require('../../config/db')
 
 module.exports = {
-    all() {
+    async all() {
+        try {
         return db.query (`
         SELECT recipes.id as recipe_id, * 
         FROM recipes
         JOIN chefs ON (recipes.chef_id = chefs.id)
         ORDER BY recipes.created_at DESC
-    `)
+        `)
+        } catch (err) {
+            console.log(err);
+        }
     },
-    create(data) {
+    async create(data, userId) {
+        try {
         const query = `
             INSERT INTO recipes (
                 chef_id,
+                user_id,
                 title,
                 ingredients,
                 preparation,
                 information
-            ) VALUES ($1, $2, $3, $4, $5)
+            ) VALUES ($1, $2, $3, $4, $5, $6)
             RETURNING id
         `
 
         const values = [
             data.chef,
+            userId,
             data.title,
             data.ingredients,
             data.preparation,
@@ -30,6 +37,9 @@ module.exports = {
         ]
 
         return db.query(query, values)
+        } catch (err) {
+            console.log(err);
+        }
     },
     find(id) {
         return db.query (`SELECT * FROM recipes WHERE ID = $1`, [id])
@@ -75,12 +85,34 @@ module.exports = {
             WHERE recipes.id = $1
         `, [id])
     },
+    file(id) {
+        try {
+            return db.query(`
+            SELECT files.* FROM files LEFT JOIN recipe_files ON (files.id = recipe_files.file_id) LEFT
+            JOIN recipes ON (recipes.id = recipe_files.recipe_id) WHERE recipes.id = $1
+            `, [id]);
+        } catch (error) {
+            console.error(error);
+        }
+    },
     chefsSelectOptions() {
         const query = `
         SELECT name, id FROM chefs
       ORDER BY name ASC
     `
     return db.query(query)
+    },
+    async findRecipeWithChef(id) {
+        try {
+            const results = await db.query(`SELECT recipes.*, 
+                chefs.name AS author FROM recipes
+                LEFT JOIN chefs ON (recipes.chef_id = chefs.id)
+                WHERE recipes.id=$1`, [id]);
+
+            return results.rows[0];
+        } catch (err) {
+            console.error(err);
+        }
     },
     searchpage(params) {
         const { filter, limit, offset } = params
@@ -144,5 +176,5 @@ module.exports = {
         LIMIT $1 OFFSET $2
         `
         return db.query(query , [limit, offset])
-    },
+    }
 }

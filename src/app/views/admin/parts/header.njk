@@ -1,0 +1,24 @@
+<header>
+    <div class="topo">
+            <div class="logo">
+            {% if session.isAdmin %}
+            <a href="/admin/users/list"><img src="/img/logo-admin.png" alt=""></a>
+            {% else %}
+            <a href="/admin/users/profile"><img src="/img/logo-admin.png" alt=""></a>
+            {% endif %}
+                
+                <div class="menu">
+                    <a href="/admin/recipes">RECEITAS</a>
+                    <a href="/admin/chefs">CHEFS</a>
+                    {% if session.isAdmin %}
+                    <a href="/admin/users/list" class="link-active">USUÁRIOS</a>
+                    {% else %}
+                        <a href="/admin/users/profile" class="link-active">PERFIL</a>
+                    {% endif %}
+                    {%if session.userId%}
+                    <form action="/admin/users/logout" method="POST">
+                            <button class="button-exit">SAIR</button>
+                    </form>
+                    {%endif%}
+            </div>
+</header>

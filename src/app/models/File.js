@@ -40,12 +40,12 @@ module.exports = {
     RETURNING id
 `
 
-const values = [
-    file_id,
-    recipe_id
-]
+    const values = [
+        file_id,
+        recipe_id
+    ]
 
-return db.query(query, values)
+    return db.query(query, values)
   },
   find(recipeId) {
     const query = `

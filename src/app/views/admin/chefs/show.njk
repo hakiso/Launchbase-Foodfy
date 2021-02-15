@@ -1,0 +1,42 @@
+{% extends 'admin.njk' %}
+
+{% block content%}
+     <section class="chefe">
+         <div class="titulo">
+             <h1>Chef: {{chef.name}}</h1>
+             {% if session.isAdmin %}
+             <a href="/admin/chefs/edit/{{chef.id}}">Editar Chef</a>
+             {% endif %}
+             </div>
+            <div class="banner-img">
+            <img src="{{chef.src}}" alt="Imagem de {{chef.image}} ">
+            </div>
+        <div class="card-title">
+            <div class="item1">
+                <div class="chef_name">{{chef.name}}</div>
+            </div>
+
+            <div class="item1">
+                <div class="chef_recipes">{{recipes.length}} {{'receitas' if recipes.length > 1 else 'receita'}}</div>
+            </div>
+           
+              <div class="receitas1"><h2>Receitas</h2></div>
+           <div class='gridf'>
+            {% for recipe in recipes%}
+            <div class="card" id="{{recipe.id}}">
+              <div class="cards">
+              <div class="images">
+                <a href="/admin/recipes/{{recipe.id}}">
+                <img src="{{recipe.src}}" alt="" />
+                </a>
+              </div><!-- /images -->
+                <div class="foodcardtxt">
+                  <p class="nome">{{recipe.title}}</p>
+                  <p class="autor">por {{chef.name}}</p>
+                  <a href="/admin/recipes/{{recipe.id}}">Visualizar</a>
+                </div><!-- /foodcard  -->
+                </div>
+                </div>
+                {%endfor%}
+    
+{%endblock%}
