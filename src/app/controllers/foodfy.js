@@ -8,7 +8,7 @@ module.exports = {
         let results = await Recipe.all()
         let recipes = results.rows
 
-        if (!recipes) return res.send('There aren\'t recipes to show')
+        if (!recipes) return res.send('Não tem receitas para mostrar!')
 
         async function getImage(recipeId) {
             let results = await Recipe.files(recipeId)
@@ -50,6 +50,11 @@ module.exports = {
         
         let results = await Recipe.receitas(params)
         const recipes = results.rows
+        if (recipes[0] == undefined) {
+            return res.render("main/receitas", {
+              filter,
+            });
+          }
 
         const pagination ={
             total: Math.ceil(recipes[0].total/limit),
@@ -132,6 +137,11 @@ module.exports = {
         
         let results = await Recipe.searchpage(params)
         const recipes = results.rows
+        if (recipes[0] == undefined) {
+            return res.render("main/searchpage", {
+              filter,
+            });
+          }
 
         const pagination ={
             total: Math.ceil(recipes[0].total/limit),

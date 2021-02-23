@@ -5,7 +5,10 @@ module.exports = {
         try {
             const { user } = req;
 
-            return res.render('admin/users/profile', { user });
+            let { success, error } = req.session
+            req.session.success = "", req.session.error = ""
+
+            return res.render('admin/users/profile', { user, success, error });
         } catch (error) {
             console.error(error);
         }
