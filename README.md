@@ -13,12 +13,12 @@
 
 <h3 align="center">Página inicial</h3>
 <p align="center">
-  <img src=".github/foodfy-main" alt="página principal">
+  <img src=".github/foodfy-main.gif" alt="página principal">
 </p>
 
 <h3 align="center">Página de admin</h3>
 <p align="center">
-  <img src=".github/foodfy-admin" alt="página admin">
+  <img src=".github/foodfy-admin.gif" alt="página admin">
 </p>
 
 ------
