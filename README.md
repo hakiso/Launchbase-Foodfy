@@ -123,7 +123,7 @@ $ npm start
 ## Testes
 Para usar o sistema como usuário cadastrado acesse:
 ```
-http://localhost:3000/login
+http://localhost:3000/admin/users/login
 ```
 
 Para acessar o sistema como administrador:
