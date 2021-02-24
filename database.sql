@@ -116,12 +116,10 @@ FOREIGN KEY ("file_id")
 REFERENCES files("id")
 ON DELETE CASCADE;
 
--- to run seeds
-DELETE FROM recipe_files;
-DELETE FROM recipes;
-DELETE FROM chefs;
-DELETE FROM files;
-DELETE FROM users;
+-- Password: 123
+INSERT INTO users (name, email, password, is_admin, created_at, updated_at) VALUES
+('Admin', 'admin@email.com', '$2a$08$vNW2HvAZSUFLOMyfXr.rEu8KsNvohtB3RdCzjH/rZY4.aavEWngL6', true, '2020-01-03 00:00:00', '2020-01-03 00:00:00'),
+('User', 'user@email.com', '$2a$08$vNW2HvAZSUFLOMyfXr.rEu8KsNvohtB3RdCzjH/rZY4.aavEWngL6', false, '2020-01-04 00:00:00', '2020-01-04 00:00:00');
 
 -- restart sequence auto_increment from tables ids
 ALTER SEQUENCE files_id_seq RESTART WITH 1;

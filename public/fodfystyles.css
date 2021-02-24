@@ -23,8 +23,7 @@ padding-top: 20px;
 }
 
 header .menu {
-  display: grid;
-  grid-template-columns: 70px 90px auto auto;
+  display: flex;
   padding-left: 122.4px;
 }
 
@@ -439,7 +438,6 @@ display: none !important;
 
 /* FILTERS */
 
-
 input[type="text"] {
     background: #ffffff;
     border: 1px solid #dddddd;
@@ -452,19 +450,21 @@ input[type="text"] {
     padding: 10px;
 }
 
-.header1 button[type="submit"] {
-    background: #6558C3;
-    border-radius: 4px;
-    width: 91px;
-    height: 37px;
-    font-family: 'Roboto';
-    font-weight: bold;
-    font-size: 16px;
-    color: #FFFFFF;
+.header1 form {
+  margin-left: 170px;
+  display: flex;
 }
 
-.header1 form {
-  margin-left: 240px;
+.header1 button[type="submit"] {
+  background: #6558C3;
+  border-radius: 4px;
+  width: 91px;
+  height: 37px;
+  font-family: 'Roboto';
+  font-weight: bold;
+  font-size: 16px;
+  color: #FFFFFF;
+  margin-left: 8px;
 }
 
 .pagination {
